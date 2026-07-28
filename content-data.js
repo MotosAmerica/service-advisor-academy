@@ -228,10 +228,45 @@ window.ACADEMY_DATA = {
           "text": "Customers escalate when they sense uncertainty in you. A shaky \"I think it should be ready by 3\" invites doubt. A grounded \"It'll be ready by 3, and I'll call you if that changes\" doesn't."
         },
         {
+          "type": "para",
+          "text": "**SCENARIO:** THE PART THAT DIDN'T ARRIVE"
+        },
+        {
+          "type": "para",
+          "text": "**SHAKY:** \"Um, so, the part... it didn't come in yet, I'm not really sure when it will, maybe tomorrow?\""
+        },
+        {
+          "type": "para",
+          "text": "**GROUNDED:** \"The part didn't arrive today like we expected. Here's what I know: it's on tomorrow's morning delivery, and I'll call you the second it's in hands, before noon either way.\""
+        },
+        {
+          "type": "para",
+          "text": "Same bad news, two completely different customer experiences. The second version gives them something solid to hold onto even though the news itself hasn't changed."
+        },
+        {
+          "type": "emphasis",
+          "text": "THE THREE WORDS THAT QUIETLY UNDO ALL OF THIS"
+        },
+        {
+          "type": "para",
+          "text": "Three words creep into conversations and erase certainty even when you actually know what you're talking about. Cut them out of estimate and status conversations entirely:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "\"Maybe\" — replace with a clear yes, or a clear not yet",
+            "\"Probably\" — replace with a specific timeframe or condition",
+            "\"I think\" — replace with \"here's what I know,\" or — if you genuinely don't — the Module 7 move: \"let me confirm and get back to you\""
+          ]
+        },
+        {
+          "type": "para",
+          "text": "This isn't about pretending to know more than you do. It's about killing the habit of hedging on things you actually do know."
+        },
+        {
           "type": "bullets",
           "items": [
             "Speak in commitments, not guesses",
-            "If you don't know, say what you will know and by when",
             "Certainty is a tone, not just a fact"
           ]
         },
@@ -1475,6 +1510,39 @@ window.ACADEMY_DATA = {
         {
           "type": "part",
           "num": "3",
+          "title": "THE GOOD / BETTER / BEST FRAMEWORK"
+        },
+        {
+          "type": "para",
+          "text": "A single estimate with one number puts the customer in a binary spot: yes or no. Three tiered options changes the conversation entirely — instead of deciding whether to take care of the bike, they're deciding how much to take care of it, which is a much easier yes to reach."
+        },
+        {
+          "type": "para",
+          "text": "**GOOD:** the minimum that's genuinely safe — the safety-critical items only, nothing deferred that shouldn't be"
+        },
+        {
+          "type": "para",
+          "text": "**BETTER:** the safety items plus one meaningful improvement worth doing at the same time"
+        },
+        {
+          "type": "para",
+          "text": "**BEST:** the full recommendation — everything legitimately due, bundled at the best combined value"
+        },
+        {
+          "type": "para",
+          "text": "\"Here's how I'd break this down — there's a version that covers exactly what's needed today, one that adds the piece I'd genuinely recommend alongside it, and the full picture if you want everything handled in one visit. Want me to walk through all three?\""
+        },
+        {
+          "type": "para",
+          "text": "Every tier still has to earn its place on the list — this only works because each item was already validated by Module 9's inspection process. Good/Better/Best is a way to present real findings with room to choose, never a way to manufacture a \"Best\" tier just to make \"Better\" look like the deal."
+        },
+        {
+          "type": "emphasis",
+          "text": "THREE HONEST OPTIONS BEAT ONE TAKE-IT-OR-LEAVE-IT NUMBER"
+        },
+        {
+          "type": "part",
+          "num": "4",
           "title": "PRESENTING THE NUMBER WITH CONFIDENCE"
         },
         {
@@ -1498,7 +1566,7 @@ window.ACADEMY_DATA = {
         },
         {
           "type": "part",
-          "num": "4",
+          "num": "5",
           "title": "THE \"WHY\" BEHIND EVERY LINE ITEM"
         },
         {
@@ -1518,7 +1586,7 @@ window.ACADEMY_DATA = {
         },
         {
           "type": "part",
-          "num": "5",
+          "num": "6",
           "title": "GIVING THE CUSTOMER A REAL CHOICE"
         },
         {
@@ -2923,23 +2991,65 @@ window.ACADEMY_DATA = {
         },
         {
           "type": "para",
-          "text": "Consistent, low-pressure touchpoints keep you top of mind without becoming a nuisance."
+          "text": "Consistent, low-pressure touchpoints keep you top of mind without becoming a nuisance. Build the cadence around real intervals, not \"whenever you think of it\":"
         },
         {
           "type": "para",
-          "text": "1. POST-VISIT CHECK-IN — 2–3 days after a repair: \"Just checking in — how's she running?\""
+          "text": "24-HOUR FOLLOW-UP — the day after any repair"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "\"Just checking in — how's everything running since the service? Anything feel different?\""
+          ]
         },
         {
           "type": "para",
-          "text": "2. MAINTENANCE DUE REMINDER — timed to mileage or date, whichever comes first, sent before the customer has to think about it themselves"
+          "text": "30-DAY CHECK-IN — a month after any visit"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "\"Wanted to check in — any questions, or anything you'd like us to take a look at?\""
+          ]
         },
         {
           "type": "para",
-          "text": "3. SEASONAL PREP REMINDER — before riding season starts in your region: \"Want to get her looked over before the weather turns?\""
+          "text": "90-DAY RIDING SEASON REFRESH — timed to your region's season, not a fixed date"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "\"Riding season's coming up — want me to get you on the schedule for a once-over before the real miles start?\""
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "6-MONTH SAFETY CHECK"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "\"You're six months in — let's keep her in top shape. Want me to get something on the calendar?\""
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "12-MONTH SERVICE ANNIVERSARY"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "\"Happy service anniversary — ready for the next round?\""
+          ]
         },
         {
           "type": "para",
-          "text": "4. THE QUIET YEAR — a customer who hasn't been in for a while gets a genuine check-in, not a sales pitch: \"Haven't seen you in a bit — everything running okay?\""
+          "text": "THE QUIET YEAR — a customer who's gone quiet outside this cadence gets a genuine check-in, not a sales pitch: \"Haven't seen you in a while — everything running okay?\""
+        },
+        {
+          "type": "emphasis",
+          "text": "A REAL CADENCE BEATS A GOOD MEMORY — BUILD IT INTO THE SYSTEM, NOT INTO WILLPOWER"
         },
         {
           "type": "part",
@@ -3743,12 +3853,12 @@ window.ACADEMY_DATA = {
         "answer": 1
       },
       {
-        "q": "What does this module say about apologizing before stating a price?",
+        "q": "What is the purpose of presenting estimates in Good/Better/Best tiers?",
         "options": [
-          "It builds trust",
-          "It should be avoided — state the number with confidence",
-          "It's required by policy",
-          "It has no effect either way"
+          "To make the highest tier seem artificially inflated",
+          "To replace a single take-it-or-leave-it number with a choice of commitment level",
+          "To avoid explaining any individual line item",
+          "To discourage the customer from choosing the minimum option"
         ],
         "answer": 1
       },
@@ -4256,7 +4366,7 @@ window.ACADEMY_DATA = {
         "q": "Which of these is part of the Follow-Up Cadence?",
         "options": [
           "Only contacting customers when they're overdue by a year",
-          "A post-visit check-in a few days after a repair",
+          "A 24-hour follow-up the day after any repair",
           "Contacting customers exclusively through mailed letters",
           "Waiting for the customer to reach out first"
         ],
