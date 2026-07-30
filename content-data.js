@@ -632,6 +632,10 @@ window.ACADEMY_DATA = {
           "text": "Two seconds of genuine interest changes the entire tone of the write-up that follows."
         },
         {
+          "type": "para",
+          "text": "Use the model name — or whatever nickname the customer uses for it — instead of \"she\" or \"her.\" \"How's the Bonneville been treating you?\" lands as genuine interest in their specific bike. A generic \"she\" reads as a habit, not attention."
+        },
+        {
           "type": "emphasis",
           "text": "STEP 5 — SET THE FRAME FOR WHAT HAPPENS NEXT"
         },
@@ -1211,19 +1215,23 @@ window.ACADEMY_DATA = {
         },
         {
           "type": "para",
-          "text": "1. BREAK-IN SERVICE — first oil change, first look for anything that settled or loosened during break-in"
+          "text": "1. BREAK-IN SERVICE — first oil change, typically in the 500-750 mile range depending on brand"
         },
         {
           "type": "para",
-          "text": "2. MINOR INTERVALS — oil, filters, general inspection"
+          "text": "2. MINOR INTERVALS — oil, filters, general inspection, typically every 6,000-10,000 miles or annually, whichever comes first"
         },
         {
           "type": "para",
-          "text": "3. MAJOR INTERVALS — valve checks, fluid flushes, deeper inspection of wear items"
+          "text": "3. MAJOR INTERVALS — valve checks, fluid flushes, deeper inspection of wear items, typically landing at double the minor interval — roughly 12,000-20,000 miles"
         },
         {
           "type": "para",
           "text": "4. MILEAGE-SPECIFIC ITEMS — chain/belt replacement, spark plugs, coolant — items with a hard mileage ceiling"
+        },
+        {
+          "type": "para",
+          "text": "These are industry-typical ballparks to set the right expectation in conversation — always confirm the exact number for the specific model and year in the OEM lookup tool before quoting it."
         },
         {
           "type": "emphasis",
@@ -1294,8 +1302,9 @@ window.ACADEMY_DATA = {
         {
           "type": "bullets",
           "items": [
+            "Most modern Triumph twins and triples (Bonneville, Street Twin, Trident, Speed Twin, Tiger) run roughly a 10,000-mile or annual minor service interval, with the bigger valve-check service landing around every 20,000 miles — that's the visit customers are most often surprised by the added cost on, so lead with why before the number",
             "Valve checks are a bigger deal on Triumph twins and triples than on many other brands — it's one of the more labor-intensive intervals, and worth explaining why it costs what it does",
-            "Many Triumph riders are collectors or long-term owners with real attachment to the bike — lean into that when explaining value: \"This keeps her running the way she's supposed to for years, not just this season\"",
+            "Many Triumph riders are collectors or long-term owners with real attachment to the bike — lean into that when explaining value: \"This keeps the Bonneville running the way it's built to for years, not just this season\"",
             "Modern Triumphs (liquid-cooled twins, triples) have longer intervals than older air-cooled models — never assume based on what you remember from a different Triumph"
           ]
         },
@@ -1306,6 +1315,7 @@ window.ACADEMY_DATA = {
         {
           "type": "bullets",
           "items": [
+            "On the liquid-cooled boxer GS and RT models, minor service typically lands every 6,000 miles, with the major service (valve clearance check, spark plugs, air filter) around every 12,000 miles — noticeably shorter than Triumph's interval, so don't accidentally quote a Triumph-length number on a BMW",
             "BMW riders — especially GS and touring platforms — tend to be highly informed and often ride serious mileage; they respond well to precision, not persuasion",
             "Boxer and inline models have different valve-check philosophies (shim-style adjustment on some, tappet-cover checks on others) — this is a case where \"let me confirm the exact spec for your model\" is the right answer, not a guess",
             "BMW customers frequently ask about touring prep specifically (long trips coming up) — tie the maintenance conversation to the trip, not just the mileage: \"Since you've got that trip coming up, this is exactly the right time to handle this\""
@@ -1878,7 +1888,7 @@ window.ACADEMY_DATA = {
         },
         {
           "type": "para",
-          "text": "**HUMAN:** \"Good news — she's all set! Total came to $340. Whenever you're ready to grab her, we'll be here.\""
+          "text": "**HUMAN:** \"Good news — the Street Twin's all set! Total came to $340. Whenever you're ready to grab it, we'll be here.\""
         },
         {
           "type": "bullets",
@@ -2228,7 +2238,8 @@ window.ACADEMY_DATA = {
         {
           "type": "bullets",
           "items": [
-            "Owners often care about character and styling — heritage-style accessories (bar-end mirrors, seat options, exhaust notes) land well",
+            "In the Pacific Northwest specifically, the most commonly added accessories are practical, not just stylistic: heated grips (close to a must through the wet season), engine protection (crash bars/skid plates), and touring luggage for year-round commuting and longer rides",
+            "Beyond those, owners often care about character and styling too — heritage-style accessories (bar-end mirrors, seat options, exhaust notes) land well",
             "Long-term Triumph owners frequently upgrade touring comfort items on older models as their riding habits evolve"
           ]
         },
@@ -2309,7 +2320,7 @@ window.ACADEMY_DATA = {
         {
           "type": "bullets",
           "items": [
-            "\"Let's go take a look at her together.\""
+            "\"Let's go take a look at the Tiger together.\""
           ]
         },
         {
@@ -2368,7 +2379,7 @@ window.ACADEMY_DATA = {
         {
           "type": "bullets",
           "items": [
-            "\"That total covers the parts, the labor, and making sure she's safe for the miles ahead.\"",
+            "\"That total covers the parts, the labor, and making sure the GS is safe for the miles ahead.\"",
             "Never apologize for the total at this stage — you already explained it during the estimate; restating it with confidence reinforces the value"
           ]
         },
@@ -2763,7 +2774,7 @@ window.ACADEMY_DATA = {
         {
           "type": "bullets",
           "items": [
-            "\"I wanted to check in personally — how's she running since we got that sorted?\"",
+            "\"I wanted to check in personally — how's the Trident running since we got that sorted?\"",
             "This single call often does more for retention than the original fix"
           ]
         },
@@ -3030,7 +3041,7 @@ window.ACADEMY_DATA = {
         {
           "type": "bullets",
           "items": [
-            "\"You're six months in — let's keep her in top shape. Want me to get something on the calendar?\""
+            "\"You're six months in — let's keep the Speed Twin in top shape. Want me to get something on the calendar?\""
           ]
         },
         {
@@ -3061,7 +3072,7 @@ window.ACADEMY_DATA = {
           "items": [
             "Always book the next service before the customer leaves the counter (this is the Module 16 delivery habit, applied as a retention strategy)",
             "Keep personal notes in the customer's file — what they ride, what they mentioned about upcoming trips, even their dog's name if it came up. Referencing it next visit tells them they're remembered, not processed",
-            "Recognize milestone visits: \"This is your fifth service with us — appreciate you trusting us with her all this time.\""
+            "Recognize milestone visits: \"This is your fifth service with us — appreciate you trusting us with the Scrambler all this time.\""
           ]
         },
         {
