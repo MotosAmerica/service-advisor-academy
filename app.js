@@ -23,7 +23,7 @@
   }
 
   // ---------- Local session (who's logged in) ----------
-  const SESSION_KEY = 'moto_academy_session';
+  const SESSION_KEY = 'moto_academy_svc_session';
 
   function getSession() {
     try {
@@ -44,7 +44,7 @@
 
   // ---------- Local progress cache (works even if Supabase is offline) ----------
   // Keyed by trainee id. Each entry: { [quizKey]: {scorePct, correct, total, completedAt} }
-  const PROGRESS_KEY = 'moto_academy_progress';
+  const PROGRESS_KEY = 'moto_academy_svc_progress';
 
   function getLocalProgress(traineeId) {
     try {
@@ -68,7 +68,7 @@
 
   // ---------- Pending sync queue (for flaky connections) ----------
   // If a Supabase write fails, we queue it here and retry on next load / action.
-  const QUEUE_KEY = 'moto_academy_pending_sync';
+  const QUEUE_KEY = 'moto_academy_svc_pending_sync';
 
   function getQueue() {
     try {
@@ -149,10 +149,12 @@
     return div.innerHTML;
   }
 
-  // Renders inline **bold** markers from the source content into <strong> tags safely.
+  // Renders inline **bold** and *italic* markers from the source content into
+  // <strong>/<em> tags safely.
   function renderInline(text) {
     const escaped = escapeHtml(text || '');
-    return escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    const bolded = escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    return bolded.replace(/\*(.+?)\*/g, '<em>$1</em>');
   }
 
   function moduleByNum(num) {
