@@ -23,7 +23,7 @@
   }
 
   // ---------- Local session (who's logged in) ----------
-  const SESSION_KEY = 'moto_academy_svc_session';
+  const SESSION_KEY = 'moto_academy_session';
 
   function getSession() {
     try {
@@ -44,7 +44,7 @@
 
   // ---------- Local progress cache (works even if Supabase is offline) ----------
   // Keyed by trainee id. Each entry: { [quizKey]: {scorePct, correct, total, completedAt} }
-  const PROGRESS_KEY = 'moto_academy_svc_progress';
+  const PROGRESS_KEY = 'moto_academy_progress';
 
   function getLocalProgress(traineeId) {
     try {
@@ -68,7 +68,7 @@
 
   // ---------- Pending sync queue (for flaky connections) ----------
   // If a Supabase write fails, we queue it here and retry on next load / action.
-  const QUEUE_KEY = 'moto_academy_svc_pending_sync';
+  const QUEUE_KEY = 'moto_academy_pending_sync';
 
   function getQueue() {
     try {
@@ -149,12 +149,10 @@
     return div.innerHTML;
   }
 
-  // Renders inline **bold** and *italic* markers from the source content into
-  // <strong>/<em> tags safely.
+  // Renders inline **bold** markers from the source content into <strong> tags safely.
   function renderInline(text) {
     const escaped = escapeHtml(text || '');
-    const bolded = escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    return bolded.replace(/\*(.+?)\*/g, '<em>$1</em>');
+    return escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   }
 
   function moduleByNum(num) {
@@ -296,18 +294,23 @@
   // Looks up a trainee by name+store, or creates a new record. Falls back to a
   // local-only id if Supabase isn't configured or the network call fails, so
   // the app still works offline / before setup is complete.
+  const ACADEMY = 'service_advisor';
+
   async function findOrCreateTrainee(name, store, role) {
     const localId = 'local-' + name.toLowerCase().replace(/\s+/g, '-') + '-' + store.toLowerCase().replace(/\s+/g, '-');
-    const fallback = { id: localId, full_name: name, store, role, _local: true };
+    const fallback = { id: localId, full_name: name, store, role, academy: ACADEMY, _local: true };
 
     if (!supabase) return fallback;
 
     try {
+      // Scoped to this academy — the shared project also holds Sales,
+      // Parts & Accessories, etc. rows for people with the same name/store.
       const { data: existing, error: findErr } = await supabase
         .from('trainees')
         .select('*')
         .eq('full_name', name)
         .eq('store', store)
+        .eq('academy', ACADEMY)
         .limit(1);
 
       if (findErr) throw findErr;
@@ -318,7 +321,7 @@
 
       const { data: created, error: createErr } = await supabase
         .from('trainees')
-        .insert({ full_name: name, store, role })
+        .insert({ full_name: name, store, role, academy: ACADEMY })
         .select()
         .single();
 
@@ -327,7 +330,7 @@
     } catch (e) {
       // Network/setup issue — queue a create attempt for later, and proceed
       // with a local id so the trainee isn't blocked from training today.
-      pushToQueue({ type: 'trainee', payload: { id: undefined, full_name: name, store, role } });
+      pushToQueue({ type: 'trainee', payload: { id: undefined, full_name: name, store, role, academy: ACADEMY } });
       return fallback;
     }
   }
@@ -836,6 +839,7 @@
       answers: answers,
       attempt_number: attemptNumber || 1,
       completed_at: result.completedAt,
+      academy: ACADEMY,
     };
 
     if (!supabase || trainee._local) {
@@ -1110,9 +1114,16 @@
       return { trainees: [], attempts: [] };
     }
     try {
-      const { data: trainees, error: tErr } = await supabase.from('trainees').select('*').order('created_at', { ascending: false });
+      const { data: trainees, error: tErr } = await supabase
+        .from('trainees')
+        .select('*')
+        .eq('academy', ACADEMY)
+        .order('created_at', { ascending: false });
       if (tErr) throw tErr;
-      const { data: attempts, error: aErr } = await supabase.from('quiz_attempts').select('*');
+      const { data: attempts, error: aErr } = await supabase
+        .from('quiz_attempts')
+        .select('*')
+        .eq('academy', ACADEMY);
       if (aErr) throw aErr;
       return { trainees: trainees || [], attempts: attempts || [] };
     } catch (e) {
